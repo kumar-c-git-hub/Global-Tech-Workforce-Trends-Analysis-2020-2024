@@ -1,168 +1,191 @@
-🌍 Global Tech Workforce Trends Analysis (2020–2024)
-Tools: Power BI | Excel | DAX | Power Query | Data Modeling
-Domain: HR Analytics | Workforce Trends
+# 🌍 Global Tech Workforce Trends Analysis (2020–2024)
 
-![Power BI](https://img.shields.io/badge/Tool-Power%20https://img.shields.io/badge/Tool-Excel-greenhttps://img.shields.io/badge/Domain-HR%20https://img.shields.io/badge/Language-DAX Project Overview
+> **Tools:** Power BI | Excel | DAX | Power Query | Data Modeling
+> **Domain:** Human Resources | Workforce Analytics
 
-This project analyzes global technology-sector layoffs (2020–2024) using Excel and Power BI to uncover workforce reduction patterns and industry-level employment dynamics.
-The dataset covers company layoffs worldwide, exploring their impact across industries, countries, and funding stages.
+![Power BI](https://img.shields.io/badge/Tool-Power%20BI-yellow)
+![Excel](https://img.shields.io/badge/Tool-Excel-green)
+![Domain-HR](https://img.shields.io/badge/Domain-HR-blue)
+![Language-DAX](https://img.shields.io/badge/Language-DAX-orange)
 
-Using Power Query for transformation and Power BI for visualization, the study provides actionable insights into tech workforce trends and recovery patterns.
+---
 
-🎯 Project Objectives
-1. Analyze Global Layoff Trends
-Study worldwide tech layoff volumes, affected companies, and year-wise intensity from 2020–2024.
+## 🧩 Project Overview
 
-2. Evaluate Workforce Changes
-Compare pre‑ and post‑layoff company sizes, measuring the impact and recovery rates across organizations.
+This project analyzes **global technology-sector layoffs from 2020 to 2024**, focusing on workforce reductions, company size changes, funding impact, and geographic trends.
+Using **Excel, Power Query, and Power BI**, raw layoff data was cleaned, transformed, and visualized to uncover meaningful insights into employment volatility and recovery patterns across the global tech ecosystem.
 
-3. Understand Geographic Impact
-Examine layoffs across continents, countries, and regions to identify global hotspots and resilience zones.
+---
 
-4. Compare Industry & Company Performance
-Assess layoffs by industry segments and company funding stage, identifying top contributors and industry patterns.
+## 🎯 Project Objectives
 
-5. Visualize Insights via Power BI
-Create interactive dashboards to filter by year, geography, industry, and company, revealing employment dynamics and trends at multiple levels.
+### 1. Analyze Global Layoff Trends
 
-📂 Data Sources
-Source & Timeline:
+Study worldwide tech layoff patterns (2020–2024), focusing on total employees laid off, companies affected, and year-wise layoff intensity.
 
-Worldwide Tech Employment Trends Dataset — OpenDataBay (2020–2024)
+### 2. Evaluate Workforce Impact
 
-Domain: HR & Workforce Analytics
+Assess changes in company headcount before and after layoffs using workforce size metrics and percentage reductions.
 
-❓ Problem Statement
-Analyze global technology-sector layoffs from 2020 to 2024 to identify key workforce reduction trends.
+### 3. Understand Geographic Impact
 
-Assess layoffs across industries and funding stages to uncover vulnerable sectors.
+Analyze layoffs across continents, countries, and regions to identify global hotspots and recovery trends.
 
-Study geographic patterns of layoffs and recovery across continents and countries.
+### 4. Compare Industry & Company Performance
 
-Evaluate workforce changes before and after layoffs for impact quantification.
+Compare layoffs across tech industries and company funding stages to highlight sector-specific vulnerabilities.
 
-Develop an interactive Power BI dashboard to explore employment dynamics and support strategic HR and business decisions.
+### 5. Interactive Data Exploration
 
-🧾 Attribute Details
-Attribute Name	Data Type	Description
-No.	Integer	Unique identifier for each layoff event
-Company	Text	Tech company name reporting the layoffs
-Location HQ	Category	City or region of company headquarters
-US State	Category	State (for U.S.-based companies)
-Country	Category	Country of company headquarters
-Continent	Category	Corresponding continent
-Laid Off	Number	Total employees laid off in each event
-Date Layoffs	Date	Date when layoff occurred or was announced
-Percentage	Number	Workforce reduction percentage
-Company Size Before Layoff	Number	Total employees before layoff
-Company Size After Layoff	Number	Total employees after layoff
-Industry	Category	Tech segment (e.g., Retail, Consumer, Transport)
-Stage	Category	Company funding stage (Seed to Post-IPO)
-Money Raised (in millions)	Number	Total funding raised in millions of USD
-Year	Date	Extracted year for trend analysis
-🧹 Data Preprocessing Steps
-Data Collection: Collected global layoff data from OpenDataBay covering 2020–2024.
+Develop dynamic **Power BI dashboards** allowing users to filter insights by year, geography, industry, and company.
 
-Data Cleaning: Removed duplicates, handled missing values, standardized numeric/date formats, and unified column names.
+---
 
-Data Transformation: Added Year column, normalized Industry and Stage names for consistency.
+## 📂 Data Sources
 
-Filtering & Sorting: Filtered data to retain relevant tech-sector layoffs and maintained chronological order.
+**Source & Timeline:**
 
-Data Integration: Combined multiple datasets into a single master table for unified Power BI analysis.
+* 📊 *Worldwide Tech Employment Trends Dataset (2020–2024)*
+* 🌐 *OpenDataBay*
 
-Data Modeling: Organized data conceptually into fact (layoff events) and dimension (company, geography, time) tables for reporting efficiency.
+**Domain:** Human Resources (HR)
 
-🧩 Data Modeling and DAX Implementation
-Data Model Design:
-Implemented a flat‑table model for simplicity, coupled with a measures table for DAX calculations.
-This approach ensures efficient computation and structured management of KPIs across all visuals.
+---
 
-Key DAX Measures:
+## ❓ Problem Statement
 
-Total Laid Off: Sum of employees laid off.
+* Analyze global technology layoffs to identify key workforce reduction trends.
+* Evaluate layoffs across industries and funding stages to uncover risk-prone segments.
+* Examine geographic distribution of layoffs and recovery patterns.
+* Quantify workforce impact using pre- and post-layoff company sizes.
+* Build an interactive dashboard to support strategic HR and business decisions.
 
-Total Companies: Distinct count of affected companies.
+---
 
-Average Layoff %: Mean workforce reduction across companies.
+## 🧾 Attribute Details
 
-Total Workforce (Before & After): Total employee counts to evaluate impact.
+| **Attribute Name**         | **Data Type** | **Description**                         |
+| -------------------------- | ------------- | --------------------------------------- |
+| No.                        | Integer       | Unique identifier for each layoff event |
+| Company                    | Categorical   | Name of the company                     |
+| Location HQ                | Categorical   | Headquarters location                   |
+| USState                    | Categorical   | U.S. state (if applicable)              |
+| Country                    | Categorical   | Country of headquarters                 |
+| Continent                  | Categorical   | Continent of headquarters               |
+| LaidOff                    | Numeric       | Number of employees laid off            |
+| Date Layoffs               | Date          | Layoff announcement date                |
+| Percentage                 | Numeric       | Percentage of workforce laid off        |
+| Company Size Before Layoff | Numeric       | Headcount before layoff                 |
+| Company Size After Layoff  | Numeric       | Headcount after layoff                  |
+| Industry                   | Categorical   | Tech industry segment                   |
+| Stage                      | Categorical   | Company funding/lifecycle stage         |
+| Money Raised (Millions)    | Numeric       | Total funding raised (USD)              |
+| Year                       | Date          | Extracted year for trend analysis       |
 
-Total Funding Raised (₹M): Aggregate company funding in millions.
+---
 
-Recovery Rate %: Ratio of post‑layoff to pre‑layoff size, representing workforce resilience.
+## 🧹 Data Preprocessing Steps
 
-📊 Analysis & Visualizations
-Dashboard Features:
+1. **Data Collection:**
+   Acquired global tech layoff data covering 2020–2024 from OpenDataBay.
 
-Developed multiple interactive Power BI dashboards aligned with different analytical views.
+2. **Data Cleaning (Excel & Power Query):**
+   Removed duplicates, handled missing values, standardized date and numeric formats.
 
-Included filters, slicers, and bookmarks for flexible exploration by year, geography, and industry.
+3. **Data Transformation:**
+   Created calculated columns (Year), normalized Industry and Stage fields.
 
-Designed pages for Overview, Trends & Funding, and Geographic & Company Insights.
+4. **Filtering & Sorting:**
+   Filtered relevant tech layoffs and sorted records chronologically.
 
-Visual Types Used:
+5. **Data Integration:**
+   Consolidated all records into a single unified dataset for analysis.
 
-Bar & Line Charts → Layoff trends and recovery rates
+6. **Data Modeling Preparation:**
+   Conceptually structured data into fact (layoff events) and dimension tables (company, geography, industry, time).
 
-Tree Maps → Industry & funding stage segmentation
+---
 
-Map Charts → Geographic distribution and impact intensity
+## 🧮 Data Modeling & DAX (Power BI)
 
-Tables → Detailed company-level workforce statistics
+* **Model Design:**
+  Implemented a **flat-table model** for simplicity and performance, supported by a dedicated **Measures Table** for centralized DAX calculations.
 
-KPI Cards → Key summary metrics (Layoffs, Companies, Avg % Reduction, Total Funding)
+### 📐 Key DAX Measures
 
-Highlights:
+* **Total Laid Off** – Total employees laid off
+* **Total Companies** – Distinct companies affected
+* **Average Layoff %** – Mean layoff percentage
+* **Total Size Before Layoff** – Workforce size before layoffs
+* **Total Size After Layoff** – Workforce size after layoffs
+* **Total Funding Raised** – Sum of funding (USD)
+* **Recovery Rate %** – Post-layoff workforce ÷ Pre-layoff workforce
 
-Visualized yearly global layoff volumes and recovery patterns.
+---
 
-Compared industry-level layoffs by size, funding stage, and geography.
+## 📊 Analysis & Visualizations
 
-Identified top 10 companies with highest layoffs by absolute and percentage impact.
+Created **interactive Power BI dashboards** using:
 
-Showcased funding trends relative to layoffs using dual-axis visuals.
+* Bar Charts
+* Line Charts
+* Pie & Donut Charts
+* Tree Maps
+* Maps
+* KPI Cards
+* Tables
 
-<img width="978" height="549" alt="Overview" src="https://github.com/user-attachments/assets/0cdcfb66-3da4-47d0-a534-40d1c27ce399" />
+### 🔍 Dashboard Highlights
+
+* **Layoff Trends:** Year-wise layoffs and workforce recovery rates
+* **Industry Impact:** Layoffs by industry and funding stage
+* **Geographic Distribution:** Country & continent-level layoff intensity
+* **Company Insights:** Top companies by layoffs and workforce reduction
+* **Key Metrics:** KPIs summarizing total layoffs, companies affected, funding, and recovery
+
+  <img width="978" height="549" alt="image" src="https://github.com/user-attachments/assets/ec5ec55a-2592-4e49-a87d-342df8742ff2" />
 
 
-📈 Performance Insights
-🔹 Layoffs peaked during late 2022–2023, particularly in North America and Europe.
+---
 
-🧭 Finance, Retail, and Healthcare tech sectors experienced the largest workforce cuts.
+## 📈 Performance Insights
 
-💡 Post‑IPO and late‑stage companies were most affected — indicating market corrections.
+* 🌍 **North America** experienced the highest concentration of tech layoffs.
+* 🏭 **Finance, Retail, and Healthcare tech** sectors were most impacted.
+* 📉 Average layoff percentage hovered around **25%** across companies.
+* 🏢 **Late-stage and Post-IPO firms** recorded significant workforce reductions.
+* 💰 Funding availability showed a strong correlation with layoff severity.
+* 📊 Recovery rates varied significantly by region, indicating uneven resilience.
 
-🌍 Recovery rates varied geographically, with Asia showing quicker rebound trends.
+---
 
-📊 Funding trends correlated with layoff volumes, suggesting capital flow impact on workforce decisions.
+## 🧠 Conclusion
 
-🔁 Average global layoff percentage hovered at ~25%, with major firms like Amazon and Intel driving totals.
-
-🧠 Conclusion
-Through Excel preprocessing, Power Query transformation, and Power BI visualization, this project provides a 360° view of the Global Tech Workforce (2020–2024).
+The integration of **Excel and Power BI** enabled a comprehensive analysis of global technology sector layoffs (2020–2024).
 Key takeaways include:
 
-High layoff concentration in Finance and Retail tech sectors.
+* Layoffs were heavily concentrated in specific industries and regions.
+* Workforce recovery patterns differed widely across continents.
+* Funding trends played a critical role in workforce decisions.
 
-Disproportionate impact on late‑stage firms and North American companies.
+This project transformed complex employment data into **clear, actionable insights** for HR professionals, business leaders, and analysts to better understand workforce dynamics and plan strategically.
 
-Uneven recovery across continents post‑2023.
+---
 
-The interactive Power BI dashboards empower HR leaders, investors, and policymakers to monitor workforce volatility and make insight-driven strategic decisions.
+## 👩‍💻 Author
 
-👩‍💻 Author
-Kumar C
-Data Analyst | Power BI Developer
+**KUMAR C**
+*Data Analyst | Power BI Developer*
 
-🌐 GitHub: kumar-c-git-hub
+* 🌐 GitHub: [Kumar C](https://github.com/kumar-c-git-hub)
+* 💼 LinkedIn: [kumar C](https://www.linkedin.com/in/kumar-c/)
+* 📧 Email: [kumarak04122021@gmail.com](mailto:kumarak04122021@gmail.com)
 
-💼 LinkedIn: kumar-c
+---
 
-📧 Email: kumarak04122021@gmail.com
+## 📚 Tags
 
-If you found this project useful or would like to collaborate, feel free to connect!
+`#PowerBI` `#WorkforceAnalytics` `#HRAnalytics` `#LayoffsAnalysis`
+`#DataVisualization` `#DAX` `#ExcelPowerQuery`
 
-📚 Tags
-#PowerBI #DataAnalysis #TechLayoffs #WorkforceAnalytics
-#DAX #DataVisualization #ExcelPowerQuery #HRAnalytics
+
